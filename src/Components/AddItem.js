@@ -1,4 +1,12 @@
+import { useState } from "react";
+
 export default function AddItem({ listContainer, setListContainer }) {
+  const [newItem, setNewItem] = useState('');
+
+  const onSubmit = () => {
+    setListContainer([...listContainer, newItem]);
+    console.log('Add Item:',newItem);
+  }
 
   return (
     <div id="additem">
