@@ -8,6 +8,8 @@ import SelectItem from './Components/SelectItem';
 
 function App() {
   const [listContainer, setListContainer] = useState([]);
+  const [selectedItem, setSelectedItem] = useState('');
+
 
   return (
     <div id="decidr">
@@ -21,6 +23,7 @@ function App() {
         />
         <SelectItem
           listContainer={listContainer}
+          setSelectedItem={setSelectedItem}
         />
       </main>
     </div>
