@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import { useState } from 'react';
 import Header from './Components/Header';
@@ -11,9 +10,9 @@ function App() {
   const [listContainer, setListContainer] = useState([]);
   const [selectedItem, setSelectedItem] = useState('');
 
-
   return (
     <div id="decidr">
+      <Header />
       <main>
       {selectedItem.length === 0
         ? <div>
