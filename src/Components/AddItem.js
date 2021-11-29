@@ -5,7 +5,6 @@ export default function AddItem({ listContainer, setListContainer }) {
 
   const onSubmit = () => {
     setListContainer([...listContainer, newItem]);
-    console.log('Add Item:',newItem);
   }
 
   return (
