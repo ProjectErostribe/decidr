@@ -4,10 +4,11 @@ import { useState } from 'react';
 import Header from './Components/Header';
 import AddItem from './Components/AddItem';
 import DisplayList from './Components/DisplayList';
+import SelectItem from './Components/SelectItem';
 
 function App() {
   const [listContainer, setListContainer] = useState([]);
-  
+
   return (
     <div id="decidr">
       <main>
@@ -16,6 +17,9 @@ function App() {
           setListContainer={setListContainer}
         />
         <DisplayList
+          listContainer={listContainer}
+        />
+        <SelectItem
           listContainer={listContainer}
         />
       </main>
