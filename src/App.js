@@ -5,6 +5,7 @@ import Header from './Components/Header';
 import AddItem from './Components/AddItem';
 import DisplayList from './Components/DisplayList';
 import SelectItem from './Components/SelectItem';
+import ShowSelectedItem from './Components/ShowSelectedItem';
 
 function App() {
   const [listContainer, setListContainer] = useState([]);
@@ -14,17 +15,30 @@ function App() {
   return (
     <div id="decidr">
       <main>
-        <AddItem
-          listContainer={listContainer}
-          setListContainer={setListContainer}
-        />
-        <DisplayList
-          listContainer={listContainer}
-        />
-        <SelectItem
-          listContainer={listContainer}
-          setSelectedItem={setSelectedItem}
-        />
+      {selectedItem.length === 0
+        ? <div>
+          <AddItem
+            listContainer={listContainer}
+            setListContainer={setListContainer}
+          />
+          <DisplayList
+            listContainer={listContainer}
+          />
+          <SelectItem
+            listContainer={listContainer}
+            setSelectedItem={setSelectedItem}
+          />
+        </div>
+        : <div>
+          <ShowSelectedItem
+            selectedItem={selectedItem}
+          />
+          <SelectItem
+            listContainer={listContainer}
+            setSelectedItem={setSelectedItem}
+          />
+        </div>
+      }
       </main>
     </div>
   );
