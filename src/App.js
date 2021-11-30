@@ -4,8 +4,12 @@ import AddItem from './Components/AddItem';
 
 function App() {
   const [listContainer, setListContainer] = useState([]);
+  const [selectedItem, setSelectedItem] = useState('');
 
-  console.log('List Container',listContainer);
+  const selectItem = () => {
+    const random = Math.floor(Math.random() * listContainer.length);
+    setSelectedItem( listContainer[random] );
+  }
   
   return (
     <div className="App">
