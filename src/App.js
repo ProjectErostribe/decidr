@@ -23,22 +23,20 @@ function App() {
           <DisplayList
             listContainer={listContainer}
           />
-          <SelectItem
-            listContainer={listContainer}
-            setSelectedItem={setSelectedItem}
-          />
         </div>
         : <div>
           <ShowSelectedItem
             selectedItem={selectedItem}
           />
-          <SelectItem
-            listContainer={listContainer}
-            setSelectedItem={setSelectedItem}
-          />
         </div>
       }
       </main>
+      <footer>
+        <SelectItem
+          listContainer={listContainer}
+          setSelectedItem={setSelectedItem}
+        />
+      </footer>
     </div>
   );
 }

@@ -9,6 +9,8 @@ export default function SelectItem({ listContainer, setSelectedItem }) {
   }
 
   return (
-    <button onClick={selectRandomItem}>Select Item</button>
+    <div id="select-item">
+      <button onClick={selectRandomItem}>Select Item</button>
+    </div>
   );
 }

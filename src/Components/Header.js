@@ -1,10 +1,10 @@
 export default function Header() {
 
   return (
-    <header className="header">
-      <p>
+    <header>
+      <div>
         Decider
-      </p>
+      </div>
     </header>
   );
 }
