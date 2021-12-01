@@ -10,9 +10,8 @@ export default function AddItem({ listContainer, setListContainer }) {
   }
 
   return (
-    <form>
+    <form id="add-item">
       <input
-        id="add-item"
         value={newItem}
         onInput={event => setNewItem(event.target.value)}
         placeholder="Add an item"

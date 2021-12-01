@@ -17,17 +17,21 @@ function App() {
       <header>
         Decider
       </header>
+      <main>
+        {selectedItem.length > 0
+          ? <p>{selectedItem}</p>
+          : <DisplayList
+            listContainer={listContainer}
+          />
+        }
+      </main>
       <AddItem
         listContainer={listContainer}
         setListContainer={setListContainer}
       />
-      {selectedItem.length > 0
-        ? <p>{selectedItem}</p>
-        : <DisplayList
-          listContainer={listContainer}
-        />
-      }
-      <button onClick={selectItem}>Select An Item</button>
+      <footer>
+        <button onClick={selectItem}>Select An Item</button>
+      </footer>
     </div>
   );
 }

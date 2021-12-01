@@ -7,7 +7,7 @@ export default function DisplayList({ listContainer }) {
   );
 
   return (
-    <ol>
+    <ol id="display-list">
       {displayList}
     </ol>
   )
