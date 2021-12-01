@@ -19,7 +19,7 @@ function App() {
       </header>
       <main>
         {selectedItem.length > 0
-          ? <p>{selectedItem}</p>
+          ? <p id="selected">{selectedItem}</p>
           : <DisplayList
             listContainer={listContainer}
           />

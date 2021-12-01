@@ -13,15 +13,50 @@ header {
   background-color: #004ba1;
   color: #FFFFFF;
   padding: 5px;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 
 main {
   overflow: auto;
 }
 
+#add-item {
+  padding: 5px;
+}
+
+#add-item input,
+#add-item button {
+  height: 1.5em;
+}
+
+#add-item input {
+  margin-right: 5px;
+}
+
+ol#display-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+}
+
+#display-list li {
+  text-align: left;
+}
+
+#selected {
+  font-size: 2em;
+}
+
 footer {
- /* height: 50px; */
+ padding: 5px;
+}
+
+button {
+  background-color: #004ba1;
+  color: #FFF;
+  border: solid #000000 1px;
+  border-radius: 3px;
 }
 
 @media screen and (max-width: 800px) {
