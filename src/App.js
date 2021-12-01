@@ -21,9 +21,12 @@ function App() {
         listContainer={listContainer}
         setListContainer={setListContainer}
       />
-      <DisplayList
-        listContainer={listContainer}
-      />
+      {selectedItem.length > 0
+        ? <p>{selectedItem}</p>
+        : <DisplayList
+          listContainer={listContainer}
+        />
+      }
       <button onClick={selectItem}>Select An Item</button>
     </div>
   );
