@@ -44,11 +44,22 @@ main {
 
 #add-item input,
 #add-item button {
-  height: 1.5em;
+  height: 2em;
+  line-height: 2em;
 }
 
 #add-item input {
-  margin-right: 5px;
+  border: solid 1px #000;
+  border-right: none;
+  border-radius: 3px 0 0 3px;
+  display: inline-block;
+  width: 70%;
+  padding: 0 5px;
+}
+
+#add-item button {
+  width: 30%;
+  border-radius: 0 3px 3px 0;
 }
 
 ol#display-list {
@@ -75,6 +86,8 @@ button {
   color: #FFF;
   border: solid #000000 1px;
   border-radius: 3px;
+  height: 2em;
+  line-height: 2em;
 }
 
 @media screen and (max-width: 800px) {
