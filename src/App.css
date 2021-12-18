@@ -9,11 +9,21 @@
   max-height: 100vh;
 }
 
+.logo {
+  height: 25px;
+}
+
 header {
   background-color: #004ba1;
   color: #FFFFFF;
   padding: 5px;
   margin-bottom: 5px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 25px;
 }
 
 main {

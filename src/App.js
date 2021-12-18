@@ -1,4 +1,5 @@
 import './App.css';
+import decidr from './decidr.svg';
 import { useState } from 'react';
 import AddItem from './Components/AddItem';
 import DisplayList from './Components/DisplayList';
@@ -15,6 +16,7 @@ function App() {
   return (
     <div className="App">
       <header>
+        <img src={decidr} alt="" className='logo' />
         Decider
       </header>
       <main>
