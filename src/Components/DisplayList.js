@@ -9,8 +9,9 @@ export default function DisplayList({ listContainer }) {
   return (
     <div id="display-list">
       { listContainer.length > 0
-        ? <p>Options: {listContainer.length}</p>
-        : <p>Add at least 2 options</p>
+        ? <p>{listContainer.length} Options</p>
+        : <p>I can help you decide.<br />
+          Add options to your list.</p>
       }
       <ol>
         {displayList}
