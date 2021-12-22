@@ -17,6 +17,11 @@ function App() {
     setSelectedItem('');
   }
   
+  const restart = () => {
+    clearSelection();
+    setListContainer([]);
+  }
+  
   return (
     <div className="App">
       <header>
@@ -43,6 +48,7 @@ function App() {
           </>
           : <button onClick={selectItem}>Select An Item</button>
         }
+        <button onClick={restart}>Restart</button>
       </footer>
     </div>
   );
