@@ -37,10 +37,10 @@ function App() {
       />
       <footer>
         {selectedItem.length > 0
-          ? <div>
+          ? <>
             <button onClick={clearSelection}>Clear Selection</button>
             <button onClick={selectItem}>Select Again</button>
-          </div>
+          </>
           : <button onClick={selectItem}>Select An Item</button>
         }
       </footer>

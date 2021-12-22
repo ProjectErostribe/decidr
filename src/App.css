@@ -36,10 +36,15 @@ header {
 
 main {
   overflow: auto;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 5px;
 }
 
 #add-item {
-  padding: 5px;
+  margin: 5px;
+  display: flex;
+  justify-content: center;
 }
 
 #add-item input,
@@ -49,17 +54,19 @@ main {
 }
 
 #add-item input {
+  display: block;
+  flex: 1 0 auto;
   border: solid 1px #000;
   border-right: none;
   border-radius: 3px 0 0 3px;
-  display: inline-block;
-  width: 70%;
   padding: 0 5px;
+  max-width: 500px;
 }
 
 #add-item button {
-  width: 30%;
+  display: block;
   border-radius: 0 3px 3px 0;
+  max-width: 100px;
 }
 
 ol#display-list {
@@ -78,7 +85,9 @@ ol#display-list {
 }
 
 footer {
- padding: 5px;
+  display: flex;
+  justify-content: space-evenly;
+  margin: 5px;
 }
 
 button {
