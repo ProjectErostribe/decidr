@@ -36,7 +36,8 @@ header {
 
 main {
   overflow: auto;
-  max-width: 500px;
+  width: 500px;
+  max-width: 100%;
   margin: 0 auto;
   padding: 5px;
 }
