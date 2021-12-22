@@ -42,7 +42,7 @@ main {
   padding: 5px;
 }
 
-#add-item {
+#add-option {
   margin: 5px;
   display: flex;
   justify-content: center;
@@ -53,13 +53,13 @@ main {
   color: #666;
 }
 
-#add-item input,
-#add-item button {
+#add-option input,
+#add-option button {
   height: 2em;
   line-height: 2em;
 }
 
-#add-item input {
+#add-option input {
   display: block;
   flex: 1 0 auto;
   border: solid 1px #000;
@@ -69,7 +69,7 @@ main {
   max-width: 500px;
 }
 
-#add-item button {
+#add-option button {
   display: block;
   border-radius: 0 3px 3px 0;
   max-width: 100px;
@@ -119,7 +119,7 @@ button:disabled {
     flex: 0 0 auto;
   }
 
-  #add-item {
+  #add-option {
     flex: 0 0 auto;
   }
 

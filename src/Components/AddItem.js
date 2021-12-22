@@ -10,11 +10,11 @@ export default function AddItem({ listContainer, setListContainer }) {
   }
 
   return (
-    <form id="add-item">
+    <form id="add-option">
       <input
         value={newItem}
         onInput={event => setNewItem(event.target.value)}
-        placeholder="Add an item"
+        placeholder="Add an option"
       />
       <button type="submit" onClick={formSubmit}>Add Item</button>
     </form>

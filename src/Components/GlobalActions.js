@@ -1,6 +1,6 @@
 export default function GlobalActions({ selectedItem, setSelectedItem, listContainer, setListContainer }) {
 
-  const selectItem = () => {
+  const selectOption = () => {
     const random = Math.floor(Math.random() * listContainer.length);
     setSelectedItem( listContainer.length > 0 ? listContainer[random] : '' );
   }
@@ -19,14 +19,14 @@ export default function GlobalActions({ selectedItem, setSelectedItem, listConta
       {selectedItem.length > 0
         ? <>
           <button onClick={clearSelection}>Clear Selection</button>
-          <button onClick={selectItem}>Select Again</button>
+          <button onClick={selectOption}>Select Again</button>
             <button onClick={restart}>Restart</button>
         </>
         : <>
         { listContainer.length > 1
           ?
           <>
-            <button onClick={selectItem}>Select An Item</button>
+            <button onClick={selectOption}>Select An Option</button>
             <button onClick={restart}>Restart</button>
           </>
           : <button disabled>Add at least 2 options</button>
