@@ -1,6 +1,6 @@
 export default function DisplayList({ listContainer }) {
 
-  const displayList = listContainer.map(
+  const displayList = listContainer.slice(0).reverse().map(
     (option, index) => (
       <li key={index}>{option}</li>
     )
@@ -13,7 +13,7 @@ export default function DisplayList({ listContainer }) {
         : <p>I can help you decide.<br />
           Add options to your list.</p>
       }
-      <ol>
+      <ol reversed>
         {displayList}
       </ol>
     </div>
