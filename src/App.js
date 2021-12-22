@@ -3,24 +3,11 @@ import decidr from './decidr.svg';
 import { useState } from 'react';
 import AddItem from './Components/AddItem';
 import DisplayList from './Components/DisplayList';
+import GlobalActions from './Components/GlobalActions';
 
 function App() {
   const [listContainer, setListContainer] = useState([]);
   const [selectedItem, setSelectedItem] = useState('');
-
-  const selectItem = () => {
-    const random = Math.floor(Math.random() * listContainer.length);
-    setSelectedItem( listContainer.length > 0 ? listContainer[random] : '' );
-  }
-
-  const clearSelection = () => {
-    setSelectedItem('');
-  }
-  
-  const restart = () => {
-    clearSelection();
-    setListContainer([]);
-  }
   
   return (
     <div className="App">
@@ -41,14 +28,12 @@ function App() {
         setListContainer={setListContainer}
       />
       <footer>
-        {selectedItem.length > 0
-          ? <>
-            <button onClick={clearSelection}>Clear Selection</button>
-            <button onClick={selectItem}>Select Again</button>
-          </>
-          : <button onClick={selectItem}>Select An Item</button>
-        }
-        <button onClick={restart}>Restart</button>
+        <GlobalActions
+          listContainer={listContainer}
+          setListContainer={setListContainer}
+          selectedItem={selectedItem}
+          setSelectedItem={setSelectedItem}
+        />
       </footer>
     </div>
   );
