@@ -70,7 +70,7 @@ main {
   max-width: 100px;
 }
 
-ol#display-list {
+#display-list ol {
   display: flex;
   flex-direction: column;
   align-items: center;

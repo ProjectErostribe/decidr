@@ -7,8 +7,14 @@ export default function DisplayList({ listContainer }) {
   );
 
   return (
-    <ol id="display-list">
-      {displayList}
-    </ol>
+    <div id="display-list">
+      { listContainer.length > 0
+        ? <p>Options: {listContainer.length}</p>
+        : <p>Add at least 2 options</p>
+      }
+      <ol>
+        {displayList}
+      </ol>
+    </div>
   )
 }
