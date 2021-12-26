@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/decidr/static/css/main.6da9ca61.chunk.css",
-    "main.js": "/decidr/static/js/main.d03da1d3.chunk.js",
-    "main.js.map": "/decidr/static/js/main.d03da1d3.chunk.js.map",
+    "main.css": "/decidr/static/css/main.e7ae0b76.chunk.css",
+    "main.js": "/decidr/static/js/main.1a9f08e4.chunk.js",
+    "main.js.map": "/decidr/static/js/main.1a9f08e4.chunk.js.map",
     "runtime-main.js": "/decidr/static/js/runtime-main.fa6a455c.js",
     "runtime-main.js.map": "/decidr/static/js/runtime-main.fa6a455c.js.map",
     "static/js/2.b6957abd.chunk.js": "/decidr/static/js/2.b6957abd.chunk.js",
@@ -10,14 +10,14 @@
     "static/js/3.e2a3213e.chunk.js": "/decidr/static/js/3.e2a3213e.chunk.js",
     "static/js/3.e2a3213e.chunk.js.map": "/decidr/static/js/3.e2a3213e.chunk.js.map",
     "index.html": "/decidr/index.html",
-    "static/css/main.6da9ca61.chunk.css.map": "/decidr/static/css/main.6da9ca61.chunk.css.map",
+    "static/css/main.e7ae0b76.chunk.css.map": "/decidr/static/css/main.e7ae0b76.chunk.css.map",
     "static/js/2.b6957abd.chunk.js.LICENSE.txt": "/decidr/static/js/2.b6957abd.chunk.js.LICENSE.txt",
     "static/media/decidr.18a014d5.svg": "/decidr/static/media/decidr.18a014d5.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.fa6a455c.js",
     "static/js/2.b6957abd.chunk.js",
-    "static/css/main.6da9ca61.chunk.css",
-    "static/js/main.d03da1d3.chunk.js"
+    "static/css/main.e7ae0b76.chunk.css",
+    "static/js/main.1a9f08e4.chunk.js"
   ]
 }
