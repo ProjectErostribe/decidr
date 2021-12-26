@@ -18,7 +18,7 @@ export default function DisplayList({ listContainer, setListContainer }) {
 
   return (
     <div id="display-list">
-      { listCount
+      { listContainer.length > 0
         ? <p>{listContainer.length} Options</p>
         : <p>I can help you decide.<br />
           Add options to your list.</p>
