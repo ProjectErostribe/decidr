@@ -43,9 +43,12 @@ main {
 }
 
 #add-option {
-  margin: 5px;
   display: flex;
   justify-content: center;
+  width: 500px;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 5px;
 }
 
 #display-list p {
@@ -78,11 +81,15 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 0.5em;
   padding: 0;
 }
 
 #display-list li {
-  text-align: left;
+  display: flex;
+  list-style: none;
+  width: 100%;
+  justify-content: space-between;
 }
 
 #selected {
@@ -92,7 +99,10 @@ main {
 footer {
   display: flex;
   justify-content: space-evenly;
-  margin: 5px;
+  width: 500px;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 5px;
 }
 
 button {
