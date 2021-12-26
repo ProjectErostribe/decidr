@@ -56,7 +56,6 @@ main {
 #add-option input,
 #add-option button {
   height: 2em;
-  line-height: 2em;
 }
 
 #add-option input {
@@ -102,7 +101,6 @@ button {
   border: solid #000000 1px;
   border-radius: 3px;
   height: 2em;
-  line-height: 2em;
 }
 
 button:disabled {
