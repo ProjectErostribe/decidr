@@ -20,6 +20,7 @@ function App() {
           ? <p id="selected">{selectedItem}</p>
           : <DisplayList
             listContainer={listContainer}
+            setListContainer={setListContainer}
           />
         }
       </main>
