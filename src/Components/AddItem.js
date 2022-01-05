@@ -2,23 +2,47 @@ import { useState } from "react";
 
 export default function AddItem({ listContainer, setListContainer }) {
   const [newItem, setNewItem] = useState('');
+  const [isValid, setIsValid] = useState('');
+  const [placeholder, setPlaceholder] = useState('Add an option');
 
   const formSubmit = (event) => {
     event.preventDefault();
-    if( isBlank(newItem) ) return setNewItem('');
+    if( isBlank(newItem.trim()) ) return setNewItem('');
+    if( isDuplicate(newItem.trim()) ) return setNewItem('');
     setListContainer([...listContainer, newItem.trim()]);
     setNewItem('');
   }
 
   const isBlank = (option) => {
-    if(option.trim() === '') {
-      document.getElementById('newOption').classList.add("invalid");
-      document.getElementById('newOption').placeholder = 'Option must not be blank';
+    if(option === '') {
+      isInvalid(true,'Option must not be blank');;
       return true;
     }
-    document.getElementById('newOption').classList.remove("invalid");
-    document.getElementById('newOption').placeholder = 'Add an option';
+    isInvalid(false);
     return false;
+  }
+
+  const isDuplicate = (option) => {
+    const inArray = listContainer.find(item => {
+      return item.toLowerCase() === option.toLowerCase();
+    });
+    if(inArray !== undefined){
+      isInvalid(true,'Option already in list');
+      return true;
+    }
+    isInvalid(false);
+    return false;
+  }
+
+  const isInvalid = (bool, errorMessage) => {
+    console.log('Invalid:',bool,errorMessage);
+    if(bool){
+      setIsValid("invalid");
+      setPlaceholder(errorMessage);
+      return
+    }
+    setIsValid("");
+    setPlaceholder('Add an option');
   }
 
   const checkNewItem = (event) => {
@@ -30,10 +54,10 @@ export default function AddItem({ listContainer, setListContainer }) {
     <form id="add-option" onSubmit={formSubmit}>
       <input
         id="newOption"
-        className=""
+        className={isValid}
         value={newItem}
         onInput={event => checkNewItem(event)}
-        placeholder="Add an option"
+        placeholder={placeholder}
         required
       />
       <button type="submit">Add Item</button>
